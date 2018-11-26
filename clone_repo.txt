@@ -1,0 +1,31 @@
+$ git init
+Initialized empty Git repository in .git/
+$ git remote add origin git@repository.com:to/copy/to.git
+$ git remote add to-clone git@repository.com:to/copy.git
+$ git fetch to-clone
+remote: Counting objects: 1584, done.
+remote: Compressing objects: 100% (1505/1505), done.
+remote: Total 1584 (delta 936), reused 0 (delta 0)
+Receiving objects: 100% (1584/1584), 843.34 KiB | 623 KiB/s, done.
+Resolving deltas: 100% (936/936), done.
+From repository.com:to/copy
+* [new branch]      master     -> to-clone/master
+$ git checkout to-clone/master
+Note: checking out 'to-clone/master'.
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+git checkout -b new_branch_name
+HEAD is now at 5ab94f7... some weird commit
+$ git reset --hard 83d81abc83e7a30eb85bdcad005ae1c8d1e513bd
+HEAD is now at 83d81ab some less weird stuff commited earlier
+$ git checkout -b master
+Switched to a new branch 'master'
+$ git push origin master
+$ git initInitialized empty Git repository in .git/$ git remote add origin git@repository.com:to/copy/to.git$ git remote add to-clone git@repository.com:to/copy.git$ git fetch to-cloneremote: Counting objects: 1584, done.remote: Compressing objects: 100% (1505/1505), done.remote: Total 1584 (delta 936), reused 0 (delta 0)Receiving objects: 100% (1584/1584), 843.34 KiB | 623 KiB/s, done.Resolving deltas: 100% (936/936), done.From repository.com:to/copy * [new branch]      master     -> to-clone/master$ git checkout to-clone/masterNote: checking out 'to-clone/master'.
+You are in 'detached HEAD' state. You can look around, make experimentalchanges and commit them, and you can discard any commits you make in thisstate without impacting any branches by performing another checkout.
+If you want to create a new branch to retain commits you create, you maydo so (now or later) by using -b with the checkout command again. Example:
+git checkout -b new_branch_name
+HEAD is now at 5ab94f7... some weird commit$ git reset --hard 83d81abc83e7a30eb85bdcad005ae1c8d1e513bdHEAD is now at 83d81ab some less weird stuff commited earlier$ git checkout -b masterSwitched to a new branch 'master'$ git push origin master
